@@ -21,7 +21,12 @@ abstract class TestCase extends Orchestra
     protected function defineEnvironment($app): void
     {
         $app['config']->set('shipbridge.default', 'ups');
-        $app['config']->set('shipbridge.drivers.ups.base_url', 'https://ups.test/v1');
-        $app['config']->set('shipbridge.drivers.ups.token', 'test-token');
+        $app['config']->set('shipbridge.drivers.ups.base_url', 'https://ups.test');
+        $app['config']->set('shipbridge.drivers.ups.client_id', 'test-client-id');
+        $app['config']->set('shipbridge.drivers.ups.client_secret', 'test-client-secret');
+        $app['config']->set('shipbridge.drivers.ups.account_number', 'A12345');
+        $app['config']->set('shipbridge.drivers.ups.shipper_number', 'A12345');
+        $app['config']->set('shipbridge.drivers.ups.service_code', '11');
+        $app['config']->set('shipbridge.drivers.ups.transaction_src', 'shipbridge');
     }
 }
