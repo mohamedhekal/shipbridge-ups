@@ -19,10 +19,12 @@ composer require mohamedhekal/shipbridge mohamedhekal/shipbridge-ups
 ### ٢) حط مفاتيح UPS في `.env`
 ```env
 SHIPBRIDGE_DRIVER=ups
-UPS_API_KEY=your-key-here
+UPS_CLIENT_ID=your-client-id
+UPS_CLIENT_SECRET=your-client-secret
+UPS_TOKEN=optional-access-token
 UPS_BASE_URL=https://onlinetools.ups.com/api
 ```
-> لو الشركة بتستخدم username/password أو OAuth، شوف ملف `config/ups.php`.
+> UPS يستخدم OAuth (`CLIENT_ID` / `CLIENT_SECRET`). حط `UPS_TOKEN` لو عندك access token جاهز.
 
 ### ٣) ابعت شحنة
 ```php
@@ -57,7 +59,10 @@ composer require mohamedhekal/shipbridge mohamedhekal/shipbridge-ups
 
 ```env
 SHIPBRIDGE_DRIVER=ups
-UPS_API_KEY=your-key-here
+UPS_CLIENT_ID=your-client-id
+UPS_CLIENT_SECRET=your-client-secret
+UPS_TOKEN=optional-access-token
+UPS_BASE_URL=https://onlinetools.ups.com/api
 ```
 
 ```php
