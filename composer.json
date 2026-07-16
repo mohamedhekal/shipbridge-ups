@@ -1,0 +1,69 @@
+{
+    "name": "mohamedhekal/shipbridge-ups",
+    "description": "UPS carrier driver for ShipBridge (Global)",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "shipping",
+        "shipbridge",
+        "carrier",
+        "ups",
+        "ups",
+        "global",
+        "shipping"
+    ],
+    "authors": [
+        {
+            "name": "Mohamed Hekal"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "mohamedhekal/shipbridge": "^0.1",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "laravel/pint": "^1.18",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hekal\\ShipBridge\\Ups\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hekal\\ShipBridge\\Ups\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hekal\\ShipBridge\\Ups\\UpsServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "analyse": "phpstan analyse --memory-limit=512M",
+        "format": "pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "homepage": "https://github.com/mohamedhekal/shipbridge-ups",
+    "support": {
+        "issues": "https://github.com/mohamedhekal/shipbridge-ups/issues",
+        "source": "https://github.com/mohamedhekal/shipbridge-ups"
+    }
+}
